@@ -1,18 +1,26 @@
-# Node.js REST API Template
-[![Build Status](https://travis-ci.org/jaredpetersen/nodejs-api-template.svg?branch=master)](https://travis-ci.org/jaredpetersen/nodejs-api-template)
+<img src="C:\Utils\Icons\remotify2.png" alt="remotify2" style="zoom: 25%;" />
 
-Simple template for creating a Node.js REST API
+# Remotify
 
-## Endpoints
-* `GET /health`: Gets API health status
-* `GET /tasks`: Lists all tasks
-* `POST /tasks`: Intentionally buggy route, returns an error
-* `null`: Default route, returns 404 as the endpoint requested does not exist
+### Local REST API to interact with running Spotify desktop client.
 
-## Usage
-```
-npm install
-npm test
-npm run test-coverage
-npm start
-```
+
+
+It will take some more time, then I initially suspected :)
+
+It rather not functional yet. But proof of concept turned out to be very effective and capable. 
+
+
+
+
+
+Icon taken from [here]( https://www.iconfinder.com/icons/1665672/flag_media_networking_social_spotify_icon).
+
+Express REST API starter cloned from [@jaredpetersen]( https://github.com/jaredpetersen/nodejs-api-template) 
+
+
+
+
+
+
+

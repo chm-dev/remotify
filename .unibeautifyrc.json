@@ -1,0 +1,48 @@
+{
+  "JavaScript": {
+    "beautifiers": [
+      "JS-Beautify", "Prettier", "ESLint", "Pretty Diff"
+    ],
+    "align_assignments": true,
+    "arrow_parens": "as-needed",
+    "brace_style": "end-expand",
+    "break_chained_methods": false,
+    "comma_first": false,
+    "end_with_comma": false,
+    "end_with_semicolon": true,
+    "indent_comments": true,
+    "indent_size": 2,
+    "indent_style": "space",
+    "jslint_happy": true,
+    "max_preserve_newlines": 2,
+    "multiline_ternary": "never",
+    "object_curly_spacing": true,
+    "pragma_insert": false,
+    "pragma_require": false,
+    "preserve_newlines": true,
+    "quotes": "single",
+    "space_after_anon_function": true,
+    "space_before_conditional": true,
+    "space_in_empty_paren": true,
+    "space_in_paren": true,
+    "wrap_line_length": 80,
+    "indent_chained_methods": false,
+    "remove_trailing_whitespace": true,
+    "align_assignments": true
+  },
+  "JSON": {
+    "beautifiers": [
+      "Prettier", "Pretty Diff", "JS-Beautify"
+    ],
+    "align_assignments": true,
+    "indent_size": 2,
+    "indent_style": "space",
+    "max_preserve_newlines": 2,
+    "pragma_insert": false,
+    "pragma_require": false,
+    "preserve_newlines": true,
+    "wrap_line_length": 80,
+    "newline_between_rules": true,
+    "no_leading_zero": true
+  }
+}

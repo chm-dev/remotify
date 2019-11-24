@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Debug Panel</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css"/>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+    <style>
+      .x-buttonGrid .uk-button-large {
+        margin-top: 8px;
+        width: 100%;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-large">
+      <h1 class=".uk-heading-small">Debug Panel</h1>
+      <section class="x-buttonGrid">
+        <div class="uk-grid uk-child-width-expand@s uk-text-center" uk-grid="uk-grid">
+          <div>
+            <a class="uk-button uk-button-default uk-box-shadow-small uk-button-large" href="http://localhost:3000/proc/status" target="apiLoader">proc/status</a>
+          </div>
+          <div>
+            <a class="uk-button uk-button-default uk-box-shadow-small uk-button-large" href="http://localhost:3000/proc/reload" target="apiLoader">proc/reload</a>
+          </div>
+          <div>
+            <a class="uk-button uk-button-default uk-box-shadow-small uk-button-large" href="#" target="apiLoader">dummy</a>
+          </div>
+        </div>
+        <div>
+          <a class="uk-button uk-button-default uk-box-shadow-small uk-button-large" href="#" target="apiLoader">dummy</a>
+        </div>
+        <div>
+          <a class="uk-button uk-button-default uk-box-shadow-small uk-button-large" href="#" target="apiLoader">dummy</a>
+        </div>
+        <div>
+          <a class="uk-button uk-button-default uk-box-shadow-small uk-button-large" href="#" target="apiLoader">dummy</a>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    <iframe src="about:blank" name="apiLoader" class="uk-box-shadow-small" style="width: 100%; "></iframe>
+    <hr>
+    <a href="" target="_blank" id="openDevtools">OPEN DEVTOOLS</a>
+    <textarea id="location" readonly="ture"></textarea>
+
+  </div>
+  <script>
+    const thisURL = new URL(location.href);
+    const devtoolsURL = decodeURIComponent(thisURL.search).replace('?devtools=', '')
+
+    const strWindowFeatures = "menubar=no,location=no,resizable=yes,status=no";
+    document
+      .querySelector('#openDevtools')
+      .addEventListener('click', e => window.open(devtoolsURL, 'devToolsWindow', strWindowFeatures))
+
+    const selectURL = document.querySelector('#location');
+    selectURL.value = devtoolsURL;
+    selectURL.addEventListener('click', e => e.srcElement.select())
+  </script>
+</body>
+
+</html>
