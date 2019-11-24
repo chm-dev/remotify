@@ -6,8 +6,12 @@
 
 It will take some more time, then I initially suspected :)
 
-It rather not functional yet. But proof of concept turned out to be very effective and capable.
+It is rather not functional yet. But proof of concept turned out to be very effective and capable.
 
-Icon taken from [here](https://www.iconfinder.com/icons/1665672/flag_media_networking_social_spotify_icon).
 
-Express REST API starter cloned from [@jaredpetersen](https://github.com/jaredpetersen/nodejs-api-template)
+
+
+
+_Icon taken from [here](https://www.iconfinder.com/icons/1665672/flag_media_networking_social_spotify_icon)._
+
+_Express REST API starter cloned from [@jaredpetersen](https://github.com/jaredpetersen/nodejs-api-template)_
