@@ -1,4 +1,5 @@
 'use strict';
+const path = require('path')
 
 // API boilerplate
 const express = require('express');
@@ -12,13 +13,19 @@ const logger = require('./logger');
 // Config
 const config = require('config');
 
+console.log(path.join(__dirname, 'debug','ui'))
+
+app.use('/debug-ui', express.static(path.join(__dirname, 'debug','ui')));
+
 // Set up middleware for request parsing, logging, etc.
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('short', { stream: logger.stream }));
 
+
 // Load up the routes
 app.use('/', routes);
+
 
 // Start the API
 app.listen(config.apiPort);

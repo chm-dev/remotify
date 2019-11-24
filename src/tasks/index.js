@@ -17,3 +17,4 @@ exports.buggyRoute = (req, res, next) => {
   // Simulate a custom error
   next(errors.newHttpError(400, 'bad request'));
 };
+ 
