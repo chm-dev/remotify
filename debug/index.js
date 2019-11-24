@@ -12,7 +12,7 @@ const {nodeDebugHost, nodeDebugPort, devChromePath, devChromeFile} = require(
 ).debug;
 const {apiHost, apiPort} = require('config');
 
-const ~~ = require('../src/helpers/devtoolsConnector');
+const DevtoolsConnector = require('../src/helpers/devtoolsConnector');
 
 let feURL;
 
@@ -28,10 +28,10 @@ nodemon(`--inspect=${nodeDebugHost}:${nodeDebugPort} server.js`).on(
 }).on('error', err => {
   console.error(err);
 }).on('start', async _ => {
-// FIXME: For some reason  devtools urls are wrong in debug panel. FIX ASAP.
+  // FIXME: For some reason  devtools urls are wrong in debug panel. FIX ASAP.
 
   console.log('App has started');
-  const dt = new devtoolsConnector(nodeDebugHost, nodeDebugPort);
+  const dt = new DevtoolsConnector(nodeDebugHost, nodeDebugPort);
   const feURL = encodeURIComponent(
     JSON.parse(await dt.getFrontendURL())[0].devtoolsFrontendUrlCompat
   );
