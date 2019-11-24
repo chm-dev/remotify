@@ -3,3 +3,7 @@ node_modules
 log
 *.log
 coverage
+debug/ui/test.html
+src/helpers/tmp-debug.js
+src/helpers/tmp-debug2.js
+wsTest.js

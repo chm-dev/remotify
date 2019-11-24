@@ -4,7 +4,7 @@ const {devtoolsConfig} = require('../../config/default.json');
 const CDP = require('chrome-remote-interface');
 const config = require('config');
 
-class DevtoolsRemote {
+class DevtoolsRemote { 
   constructor(host = spotifyDebugHost, port = spotifyDebugPort) {
     this._host  = host;
     this._port  = port;
