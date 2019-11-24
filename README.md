@@ -1,4 +1,6 @@
-<img src="docs/logo.png" alt="remotify" style="zoom: 30%;" />
+<div style="text-align:center">
+<img src="docs/logo.png" alt="remotify" height="128" />
+</div>
 
 # Remotify
 
