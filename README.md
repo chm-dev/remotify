@@ -1,6 +1,4 @@
-<div style="text-align:center">
-<img src="docs/logo.png" alt="remotify" height="128" />
-</div>
+<p align="center"><img src="docs/logo.png" align="center" alt="remotify" height="128" style="display: block; margin: auto;" /></p>
 
 # Remotify
 
