@@ -18,7 +18,7 @@ Thank you <3
 const http = require('http');
 const https = require('https');
 
-let req = async function (url, method = 'GET', postData) {
+let req = function (url, method = 'GET', postData) {
   console.log(url);
 
   const parsedUrl = new URL(url);

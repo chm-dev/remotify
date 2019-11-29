@@ -7,12 +7,12 @@ module.exports = class {
     this.host = host;
     this.port = port;
   }
-
+/* 
   getWsURL() {
     request(`http://${this.host}:${this.port}/json`).then(data => {
       return JSON.parse(data)[0].webSocketDebuggerUrl;
     });
-  }
+  } */
 
   getFrontendURL() {
     return new Promise((resolve, reject) => {

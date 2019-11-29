@@ -8,7 +8,8 @@
   "scripts": {
     "test": "NODE_ENV=test mocha src/**/*.test-*.js --exit",
     "coverage": "nyc npm test",
-    "dev": " node --inspect=9226 debug/index.js"
+    "dev": " node --inspect=9010 debug/index.js",
+    "nodemon": "nodemon --inspect server.js"
   },
   "dependencies": {
     "chrome-remote-interface": "^0.28.0",

@@ -3,14 +3,16 @@
   "apiPort": 3000,
   "spotifyProcessName": "Spotify",
   "spotifyDebugHost": "localhost",
-  "spotifyDebugPort": 9627,
-  "spotifyDebugArgument": "remote-debugging-port=9627",
+  "spotifyDebugPort": 9009,
+  "spotifyDebugArgument": "remote-debugging-port=9009",
   "spotifyPathRelative": "\\Spotify\\Spotify.exe",
   "debug": {
+    "mode": true,
     "nodeDebugHost": "localhost",
-    "nodeDebugPort": 9226,
+    "nodeDebugPort": 9010,
     "devChromePath": "C:\\Dev\\Chromium\\",
-    "devChromeFile": "chrome_proxy.exe"
+    "devChromeFile": "chrome.exe",
+    "autoOpenPanel": true
   },
   "devtoolsConfig": {
     "availableDomains": [
@@ -28,6 +30,7 @@
       "Profiler",
       "Runtime",
       "Security",
+      "Target",
       "Target",
       "Console",
       "Schema",
@@ -57,7 +60,7 @@
       "Tethering",
       "Tracing",
       "WebAudio",
-      "WebAuthn"
+      "WebAuth"
     ]
   }
 }

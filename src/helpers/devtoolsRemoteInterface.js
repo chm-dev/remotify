@@ -1,29 +1,61 @@
-const {spotifyDebugHost, spotifyDebugPort} = require('../../config/default.json');
-const {devtoolsConfig} = require('../../config/default.json');
+/**
+ * Module which inititates and holds connection to spotify's devtools
+ */
+const config = require('config');
+const {spotifyDebugHost, spotifyDebugPort, devtoolsConfig} = config;
 
 const CDP = require('chrome-remote-interface');
-const config = require('config');
 
-class DevtoolsRemote { 
+/**
+ * class for devTools protocol
+ */
+class DevtoolsRemote {
+  /**
+   * @constructor
+   * @param  {string} [host=spotifyDebugHost] - Spotify Host defaults to config value
+   * @param  {string} [port=spotifyDebugPort] - Spotify devtools Port defaults to config value
+   */
   constructor(host = spotifyDebugHost, port = spotifyDebugPort) {
-    this._host  = host;
-    this._port  = port;
+    this._host = host;
+    this._port = port;
     this.client = null;
   }
 
+  /**
+   *
+   * Devtools conection init.
+   * Inits devtools connection and binds it to this.client. Returns true on sucess
+   * @async
+   * @returns {boolean} true on success
+   * @memberof DevtoolsRemote
+   */
   async initClient() {
     this.client = await CDP({host: this._host, port: this._port});
     return true;
   }
 
+  /**
+   *
+   * Enables certain domain in devtools
+   * @param {*} domain
+   * @returns bool
+   * @memberof DevtoolsRemote
+   */
   async enable(domain) {
     if (this.availableDomains.includes(domain) && typeof this.client === 'object') {
-      await this.client[domain].enable();
-      return this.client[domain];
+      await this
+        .client[domain]
+        .enable();
+      return true;
     } else 
       return false;
     }
   
+  /**
+   * Returns array with all devtools domains available.
+   *  {@link https://chromedevtools.github.io/devtools-protocol/|More info.}
+   * @returns {Array<String>}
+   */
   get availableDomains() {
     return devtoolsConfig.availableDomains;
   }
@@ -32,7 +64,7 @@ class DevtoolsRemote {
 module.exports = DevtoolsRemote;
 
 /** TESTS ... GONNA REMOVE IT SOON **/
-(async _ => {
+/* (async _ => {
   const remote = new DevtoolsRemote();
   console.log(remote);
 
@@ -46,3 +78,4 @@ module.exports = DevtoolsRemote;
   console.log(Page);
   Page.navigate({url: 'about:blank'});
 })();
+ */
