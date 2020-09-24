@@ -20,7 +20,9 @@ Currently implemented actions include:
 * Toggle Play / Pause
 * Next Track 
 
+## Debug
 
+This project implements custom debuging tool, which automatically open devtools in debug mode.
 
 
 _Icon taken from [here](https://www.iconfinder.com/icons/1665672/flag_media_networking_social_spotify_icon)._
