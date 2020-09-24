@@ -4,13 +4,19 @@
 
 ### Local REST API to interact with running Spotify desktop client.
 
-It will take some more time, then I initially suspected :)
 
-This is more of a proof of concept but it turned out to be very effective and capable.
+This is a proof of concept but it turned out to be very effective.
+
+## How it works.
+
+Node process start rest api server which can be control running Spotify app.
+It needs Spotify to be running in debug mode (devtools protocol) so Electron gui of Spotify can be accessed this way.
+If Spotify is running already in regular mode - it can be restarted with debug mode turned on.
+Actual actions can be performed by UI automation.
 
 Currently implemented actions include: 
 * Connect to running spotify
-* Restart or start Spotify in debug-mode
+* Restart or start Spotify in debug mode 
 * Toggle Play / Pause
 * Next Track 
 
