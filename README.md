@@ -6,8 +6,13 @@
 
 It will take some more time, then I initially suspected :)
 
-It is rather not functional yet. But proof of concept turned out to be very effective and capable.
+This is more of a proof of concept but it turned out to be very effective and capable.
 
+Currently implemented actions include: 
+* Connect to running spotify
+* Restart or start Spotify in debug-mode
+* Toggle Play / Pause
+* Next Track 
 
 
 
