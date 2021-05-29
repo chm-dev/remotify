@@ -19,7 +19,7 @@
     "find-process": "^1.4.3",
     "morgan": "^1.7.0",
     "winston": "^3.1.0",
-    "ws": "^7.2.0"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "@unibeautify/beautifier-eslint": "^0.6.0",
